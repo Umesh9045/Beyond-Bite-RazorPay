@@ -1,0 +1,343 @@
+.wrapper-nav h4 {
+    margin: 0;
+    font-family: Poppins, sans-serif
+}
+
+.wrapper-nav .dot {
+    color: #ff7f57
+}
+
+.cs-main_header {
+    background-color: transparent;
+    margin-top: 0;
+    /* color: #5a3a3a; */
+    color: rgb(116, 40, 40);
+}
+
+.cs-gescout_sticky {
+    background-color: #ffffff;
+    /* background: radial-gradient(circle at 50% 50%, #fff7ad, #ffa9f9); */
+}
+
+body {
+    padding-top: 0;
+    /* background-color: #f6fcfe; */
+    /* color: #5a3a3a; */
+    color: rgb(116, 40, 40);
+    background: radial-gradient(#fff7ad, #ffa9f9);
+}
+
+#home {
+    background: radial-gradient(circle at 50% 50%, #fff7ad, #ffa9f9);
+    width: 100%;
+    height: 100vh;
+}
+
+.cs-hero.cs-style1 {
+    padding-bottom: 0;
+    min-height: 800px;
+}
+
+.cs-pricing_table.cs-style1 {
+    color: white;
+}
+
+/* Hero section  */
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease;
+    /* color: #fff */
+}
+
+.wrapper h1 {
+    font-size: 64px;
+    font-family: Poppins, sans-serif;
+    margin-top: 10px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center
+}
+
+.wrapper .dot {
+    color: #ff7f57
+}
+
+@keyframes fadeIn {
+    from {
+        top: 20%;
+        opacity: 0
+    }
+
+    to {
+        top: 100;
+        opacity: 1
+    }
+}
+
+.row.justify-content-center>div {
+    padding: 0 5px
+}
+
+@media (max-width:856px) {
+    .row.justify-content-center>div {
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width:425.98px) {
+    .cs-video_popup iframe {
+        width: 370px;
+        height: 180px
+    }
+}
+
+@media (max-width:386px) {
+    .cs-video_popup iframe {
+        width: 300px
+    }
+}
+
+/* Custom CSS for Bootstrap Table */
+.custom-table {
+    margin: auto;
+    text-align: center;
+    max-width: max-content;
+    background: linear-gradient(267.18deg, #161616 0, #080808 100%);
+    border-radius: 10px;
+    color: orange
+}
+
+.custom-table-content {
+    margin: auto;
+    text-align: center;
+    max-width: max-content
+}
+
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px
+}
+
+.footer-social a {
+    margin: 0 15px
+}
+
+.cs-text_widget {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.cs-text_widget img {
+    max-width: 100%;
+    height: auto
+}
+
+.cs-footer_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+.cs-footer_item ul {
+    list-style: none;
+    padding: 0
+}
+
+.cs-newsletter {
+    text-align: center
+}
+
+.cs-bottom_footer_right .cs-text_btn:hover span {
+    color: #ff4500
+}
+
+
+/* Our Result CSS  */
+.video-container {
+    max-width: 75%;
+    margin: auto;
+    border: 8px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #000
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%
+}
+
+@media screen and (max-width:875px) {
+    .video-container {
+        max-width: 100%
+    }
+}
+
+.slider-wrapper {
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 250px;
+    margin-top: 3rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, )
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -369px
+    }
+}
+
+.item {
+    width: 369px;
+    height: 250px;
+    position: absolute;
+    border-radius: 6px
+}
+
+.left .item {
+    left: max(calc(369px * 7), 100%);
+    animation: scrollLeft 15s linear infinite
+}
+
+.left .item1 {
+    animation-delay: calc((-15s / 7) * 6)
+}
+
+.left .item2 {
+    animation-delay: calc((-15s / 7) * 5)
+}
+
+.left .item3 {
+    animation-delay: calc((-15s / 7) * 4)
+}
+
+.left .item4 {
+    animation-delay: calc((-15s / 7) * 3)
+}
+
+.left .item5 {
+    animation-delay: calc((-15s / 7) * 2)
+}
+
+.left .item6 {
+    animation-delay: calc((-15s / 7) * 1)
+}
+
+.left .item7 {
+    animation-delay: calc((-15s / 7) * 0)
+}
+
+
+/* pdf popup  */
+.pdfPopup_container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pdfPopup_button {
+    cursor: pointer;
+}
+
+/* Pop Up */
+.pdfPopup_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.8);  */
+    background: radial-gradient(#fff7ad, #ffa9f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin: 0;
+}
+
+/* Add this to make the popup content scrollable */
+.pdfPopup_popupIn {
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    max-height: 600px;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    /* overflow-y: auto;  */
+}
+
+.pdfPopup_frameSide {
+    margin-top: 30px;
+}
+
+.pdfPopup_frameSide,
+.pdfPopup_myIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdfPopup_close {
+    position: absolute;
+    top: 0px;
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+    color: #5a3a3a;
+    background: #f6bebe;
+    border: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Disable scrolling on the main page */
+body.pdfPopup_noScroll {
+    overflow: hidden !important;
+    /* Ensure no scrolling */
+    position: fixed;
+    width: 100%;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .pdfPopup_popupIn {
+        max-height: 35%;
+    }
+
+    .pdfPopup_close {
+        height: 60px;
+    }
+}
+
+
+
+.cs-hero_slide {
+    position: relative;
+}
+
+.cs-hero_slide::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #fff7ad, #ffa9f9);
+    opacity: 0.2; /* Adjust transparency */
+    pointer-events: none; /* Ensures interaction with underlying elements */
+}
