@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Favicon Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/BB/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/BB/favicon_io/favicon-32x32.png">
@@ -237,7 +237,8 @@
                 <div class="col-xl-5 col-lg-5">
                     <div class="cs-single_product_thumb cs-portfolio_img">
                         <div class="cs-single_product_thumb_item cs-shine_hover_1" style="border-radius: 20px;">
-                            <img class="cs-radius_20" src="../../assets/img/BB/products/Nutri-balls/nutri-balls-1.png" alt="Nutri Balls">
+                            <img class="cs-radius_20" src="../../assets/img/BB/products/Nutri-balls/nutri-balls-1.png"
+                                alt="Nutri Balls">
                         </div>
                         <!-- <div class="cs-single_product_thumb_item cs-shine_hover_1" style="border-radius: 20px;">
                             <img class="cs-radius_20" src="../../assets/img/BB/products/Nutri-balls/nutri-balls-2.png" alt="Nutri Balls Container">
@@ -247,7 +248,8 @@
                                 alt="Nutri Balls Container Back">
                         </div>
                         <div class="cs-single_product_thumb_item cs-shine_hover_1" style="border-radius: 20px;">
-                            <img class="cs-radius_20" src="../../assets/img/BB/products/Nutri-balls/nutri-balls-2.png" alt="Nutri Balls Container">
+                            <img class="cs-radius_20" src="../../assets/img/BB/products/Nutri-balls/nutri-balls-2.png"
+                                alt="Nutri Balls Container">
                         </div>
                     </div>
                     <div class="cs-single_product_nav">
@@ -258,11 +260,12 @@
                             <img src="../../assets/img/BB/products/Nutri-balls/nutri-balls-2.png" alt="Nutri Balls Container">
                         </div> -->
                         <div class="cs-single_product_thumb_mini">
-                            <img  src="../../assets/img/BB/products/Nutri-balls/nutri-balls-3.jpg"
-                            alt="Nutri Balls Container Back">
+                            <img src="../../assets/img/BB/products/Nutri-balls/nutri-balls-3.jpg"
+                                alt="Nutri Balls Container Back">
                         </div>
                         <div class="cs-single_product_thumb_mini">
-                            <img src="../../assets/img/BB/products/Nutri-balls/nutri-balls-2.png" alt="Nutri Balls Container">
+                            <img src="../../assets/img/BB/products/Nutri-balls/nutri-balls-2.png"
+                                alt="Nutri Balls Container">
                         </div>
                     </div>
                     <div class="cs-height_0 cs-height_lg_50"></div>
@@ -409,19 +412,85 @@
         </div>
 
         <div class="cs-section_heading cs-style1 text-center">
-            <a class="cs-btn cs-style1" href="https://wa.me/c/919359889291" target="_blank"
-                style="margin-top: 30px;">
+            <style>
+                /* Styles for the backdrop */
+                .overlay {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.4);
+                    z-index: 999;
+                }
+
+                /* Payment Options Box */
+                .payment-box {
+                    display: none;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                    z-index: 1000;
+                    width: 280px;
+                }
+
+                .payment-box button {
+                    width: 100%;
+                    padding: 12px;
+                    margin: 10px 0;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                .payment-box .pay-online {
+                    background-color: #28a745;
+                    color: white;
+                }
+
+                .payment-box .pay-online:hover {
+                    background-color: #218838;
+                }
+
+                .payment-box .pay-cod {
+                    background-color: #007bff;
+                    color: white;
+                }
+
+                .payment-box .pay-cod:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+
+            <!-- Buy Now Button -->
+            <button onclick="showPaymentOptions()" class="cs-btn cs-style1" style="margin-top: 30px;">
                 <span>Buy Now</span>
                 <svg width="26" height="12" viewBox="0 0 26 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M25.5303 6.53033C25.8232 6.23744 25.8232 5.76256 25.5303 5.46967L20.7574 0.696699C20.4645 0.403806 19.9896 0.403806 19.6967 0.696699C19.4038 0.989593 19.4038 1.46447 19.6967 1.75736L23.9393 6L19.6967 10.2426C19.4038 10.5355 19.4038 11.0104 19.6967 11.3033C19.9896 11.5962 20.4645 11.5962 20.7574 11.3033L25.5303 6.53033ZM0 6.75H25V5.25H0V6.75Z"
                         fill="currentColor"></path>
                 </svg>
-            </a>
+            </button>
+
+            <!-- Overlay -->
+            <div class="overlay" id="overlay" onclick="hidePaymentOptions()"></div>
+
+            <!-- Payment Options Box -->
+            <div class="payment-box" id="paymentBox">
+                <h3>Select Payment Method</h3>
+                <button class="pay-online" onclick="payOnline()">Pay Online</button>
+                <button class="pay-cod" onclick="payCOD()">Cash on Delivery</button>
+            </div>
         </div>
-        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_PUBomDc0D8avvw" async> </script> </form>
-   
-     
         <div class="pdfPopup_container">
             <div class="cs-pricing_btn_wrap text-center pdfPopup_card">
                 <a class="pdfPopup_button cs-text_btn" data-href="/nutritionalvalues.pdf">
@@ -679,6 +748,24 @@
     <!-- <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2024/11/26/09/20241126090136-RLFJPS10.js"></script> -->
     <script>
+        function showPaymentOptions() {
+            document.getElementById('paymentBox').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function hidePaymentOptions() {
+            document.getElementById('paymentBox').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function payOnline() {
+            window.open('https://pages.razorpay.com/stores/st_PUBK43FYCOWHXv', '_blank');
+        }
+
+        function payCOD() {
+            // window.location.href = 'https://take.app/beyondbite';
+            window.open('https://take.app/beyondbite', '_blank');
+        }
 
         // Function to handle screen size changes
         function handleScreenResize() {
@@ -743,16 +830,16 @@
         pdfPopup_buttons.forEach((button) => {
             button.addEventListener('click', function () {
                 var buttonPDFLink = this.getAttribute("data-href"); // Get the PDF link
-                scrollPosition = window.scrollY;  // Store the current scroll position
+                // scrollPosition = window.scrollY;  // Store the current scroll position
                 pdfPopup_popups.forEach((popup) => {
                     popup.style.display = 'flex'; // Show the popup
                 });
                 pdfPopup_iframes.forEach((iframe) => {
                     iframe.setAttribute("src", buttonPDFLink); // Set the iframe source
                 });
-                document.body.classList.add('pdfPopup_noScroll'); // Disable outer page scrolling
-                if (navbar) navbar.style.display = 'none';
-                if (tagLine) tagLine.style.display = 'none';
+                // document.body.classList.add('pdfPopup_noScroll'); // Disable outer page scrolling
+                // if (navbar) navbar.style.display = 'none';
+                // if (tagLine) tagLine.style.display = 'none';
             });
         });
 
@@ -766,9 +853,9 @@
                         iframe.removeAttribute("src"); // Clear iframe source
                     });
                     document.body.classList.remove('pdfPopup_noScroll'); // Re-enable scrolling
-                    window.scrollTo(0, scrollPosition);
-                    if (navbar) navbar.style.display = '';
-                    if (tagLine) tagLine.style.display = '';
+                    // window.scrollTo(0, scrollPosition);
+                    // if (navbar) navbar.style.display = '';
+                    // if (tagLine) tagLine.style.display = '';
                 }
 
                 // || event.target === popup
