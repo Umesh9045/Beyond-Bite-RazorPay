@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Include Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <div class="order-details text-center">
+        <h3>Snack Smarter, Live Healthier</h3>
+
+        <!-- Swiper Container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/BB/products/Nutri-balls/nutri-balls-1.png" alt="Nutri Balls 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/BB/products/Nutri-balls/nutri-balls-2.png" alt="Nutri Balls 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/BB/products/Nutri-balls/nutri-balls-3.jpg" alt="Nutri Balls 3">
+                </div>
+            </div>
+
+            <!-- Pagination (Dots Below) -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Include Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,  // Show 3 images on Desktop
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },   // Show 1 image on Mobile
+                768: { slidesPerView: 2 }, // Show 2 images on Tablets
+                1024: { slidesPerView: 3 } // Show 3 images on Desktop
+            }
+        });
+    </script>
+
+    <!-- Custom Styling -->
+    <style>
+        .swiper-container {
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</body>
+
+</html>
